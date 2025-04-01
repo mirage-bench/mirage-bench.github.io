@@ -148,10 +148,10 @@
         <div class="content has-text-justified">
           <p>
             Retrieval-Augmented Generation (RAG) utilizes Large Language Models (LLMs) to generate factual and correct answers to user questions by citing information available in ground-truth documents. 
-            However, at present it's a challenge to evaluate Retrieval-Augmented Generation (RAG) systems both <bold>reliably</bold> and <bold>efficiently</bold> across multiple langauges. Traditional RAG benchmarks can be categorized into two categories:
+            However, at present it's a challenge to evaluate Retrieval-Augmented Generation (RAG) systems both <strong>reliably</strong> and <strong>efficiently</strong> across multiple langauges. Traditional RAG benchmarks can be categorized into two categories:
             <ul>
-              <li> <bold>Heuristic-focused:</bold> Manual and traditional approach towards benchmarking. One requires multiple hand-crafted evaluation metrics which require extensive human intervention (in terms of research and experimentation) and/or a gold truth answer which is scarcely available in RAG scenarios.</li>
-              <li> <bold>Arena-focused:</bold> An automatic approach where two responses are compared head one in a battle with LLM as a judge (such as MT-Bench). However, automatic evaluations don't necessarily mean they are cheap. LLM-as-a-Judge pairwise comparisons by a high-performing LLM (like GPT-4o) can often shoot up your costs and expenses.</li> 
+              <li> <strong>Heuristic-focused:</strong> Manual and traditional approach towards benchmarking. One requires multiple hand-crafted evaluation metrics which require extensive human intervention (in terms of research and experimentation) and/or a gold truth answer which is scarcely available in RAG scenarios.</li>
+              <li> <strong>Arena-focused:</strong> An automatic approach where two responses are compared head one in a battle with LLM as a judge (such as MT-Bench). However, automatic evaluations don't necessarily mean they are cheap. LLM-as-a-Judge pairwise comparisons by a high-performing LLM (like GPT-4o) can often shoot up your costs and expenses.</li> 
             </ul>           
           </p>
         </div>
@@ -178,6 +178,7 @@
       </div>
     </div>
   </div>
+</section>
 
 <!-- Teaser image-->
 <section class="hero teaser">
@@ -197,9 +198,9 @@
           MIRAGE-Bench is a benchmark which integrates heuristic-based features to learn a regression model for synthetic arena-based evaluations. Below is a step-by-step breakdown of its process:
         </p>
         <ul>
-          <li> <bold>Heuristic-Based Features:</bold> MIRAGE assesses 21 different SoTA multilingual-focused LLMs using seven heuristic features. These include metrics such as language detection, citation quality, answer overlap, and fluency. By leveraging these features, MIRAGE-Bench can evaluate RAG systems without requiring human intervention for every evaluation pair.</li>
-          <li> <bold>Pairwise Comparisons with GPT-4o:</bold> MIRAGE-Bench incorporates LLM-as-a-Judge pairwise comparisons on a smaller subset of evaluation queries. This step provides high-quality labeled data for training the regression model, ensuring that the trained model is accurate and reliable.</li>
-          <li> <bold>Surrogate Judge (Regression Model):</bold> A regression model, such as Random Forest, is trained on the heuristic features and LLM-as-a-Judge results using a Bradley-Terry model and bootstrapping to maximize the juice from a small subset of training points. This model then generates a synthetic arena-based leaderboard, which can cost-effectively evaluate multiple models, by using only heuristic features as input.</li>
+          <li> <strong>Heuristic-Based Features:</strong> MIRAGE assesses 21 different SoTA multilingual-focused LLMs using seven heuristic features. These include metrics such as language detection, citation quality, answer overlap, and fluency. By leveraging these features, MIRAGE-Bench can evaluate RAG systems without requiring human intervention for every evaluation pair.</li>
+          <li> <strong>Pairwise Comparisons with GPT-4o:</strong> MIRAGE-Bench incorporates LLM-as-a-Judge pairwise comparisons on a smaller subset of evaluation queries. This step provides high-quality labeled data for training the regression model, ensuring that the trained model is accurate and reliable.</li>
+          <li> <strong>Surrogate Judge (Regression Model):</strong> A regression model, such as Random Forest, is trained on the heuristic features and LLM-as-a-Judge results using a Bradley-Terry model and bootstrapping to maximize the juice from a small subset of training points. This model then generates a synthetic arena-based leaderboard, which can cost-effectively evaluate multiple models, by using only heuristic features as input.</li>
       </div>
     </div>
   </div>
@@ -251,13 +252,13 @@
         </h2>
         <div class="content has-text-justified">
           <p>
-          <bold>Quantitative Analysis:</bold> Our learned synthetic leaderboard observes a high correlation (Kendall Tau ($\tau$) = 0.909) with GPT-4o based pairwise comparison results, indicating the effectiveness of the learned regression model.
+          <strong>Quantitative Analysis:</strong> Our learned synthetic leaderboard observes a high correlation (Kendall Tau ($\tau$) = 0.909) with GPT-4o based pairwise comparison results, indicating the effectiveness of the learned regression model.
           </p>
           <p>
-            <bold>Heatmaps:</bold> We observed that closed-sourced and large multilingual-focused LLMs dominate multilingual generation, GPT-4 and GPT-4o perform the best with next best being the LLAMA-3-70B model.
+            <strong>Heatmaps:</strong> We observed that closed-sourced and large multilingual-focused LLMs dominate multilingual generation, GPT-4 and GPT-4o perform the best with next best being the LLAMA-3-70B model.
           </p>
           <p>
-            <bold>Benchmarking:</bold> MIRAGE-Bench benchmarks 21 multilingual-focused LLMs, evaluating their performance across 18 languages. The framework demonstrates a high correlation (Kendall Tau ($\tau$) = 0.909) with GPT-4-based pairwise comparison results, validating its effectiveness.
+            <strong>Benchmarking:</strong> MIRAGE-Bench benchmarks 21 multilingual-focused LLMs, evaluating their performance across 18 languages. The framework demonstrates a high correlation (Kendall Tau ($\tau$) = 0.909) with GPT-4-based pairwise comparison results, validating its effectiveness.
           </p>
         </div>
       </div>
